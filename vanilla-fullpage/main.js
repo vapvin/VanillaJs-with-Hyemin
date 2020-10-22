@@ -3,7 +3,6 @@ let next;
 let prev;
 const scrollEffects = element => {  
     window.scrollTo({
-      'left': 0,
       'top': element.offsetTop,
 
     });
