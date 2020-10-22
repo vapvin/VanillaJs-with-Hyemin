@@ -1,0 +1,70 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+section, header, footer {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: grey;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.show .container {
+  opacity: 1;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1488CC), to(#2B32B2)) fixed;
+  background: linear-gradient(to bottom, #1488CC, #2B32B2) fixed;
+  color: #fff;
+}
+
+section:nth-of-type(odd) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#076585), to(#fff)) fixed;
+  background: linear-gradient(to bottom, #076585, #fff) fixed;
+  color: #fff;
+}
+
+section:nth-of-type(even) {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9796f0), to(#fbc7d4)) fixed;
+  background: linear-gradient(to bottom, #9796f0, #fbc7d4) fixed;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
