@@ -15,10 +15,10 @@ body {
 .watch {
   width: 350px;
   height: 350px;
-  border-radius: 50%;
+  border-radius: 15px;
   background: #c1d5e0;
-box-shadow:  29px 29px 57px #a2b3bc, 
-             -29px -29px 57px #e0f7ff;
+  box-shadow: inset 5px 5px 9px #b2c4ce, 
+              inset -5px -5px 9px #d0e6f2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +83,7 @@ box-shadow:  29px 29px 57px #a2b3bc,
   width: 4px;
   height: 90px;
   border-radius: 6px 6px 0 0;
-  background: #607d8b;
+  background: #ff1744;
   z-index: 10;
 }
 
