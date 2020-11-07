@@ -20,14 +20,15 @@
 // const itemIndex = arr.findIndex(item => item%2 === 0);
 // console.log(itemIndex);
 
-const arr1 = {
-    one: 1,
-    three: 3,
-    five: 5,
-    seven: 7
-};
-const arr2 = {...arr1};
+// const arr1 = {
+//     one: 1,
+//     three: 3,
+//     five: 5,
+//     seven: 7
+// };
+// const arr2 = {...arr1};
 
-arr2["nine"] = 9;
-console.log(arr2);
-console.log(arr1);
+// arr2["nine"] = 9;
+// console.log(arr2);
+// console.log(arr1);
+
