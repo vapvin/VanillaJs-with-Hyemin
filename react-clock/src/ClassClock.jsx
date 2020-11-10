@@ -2,9 +2,9 @@ import React from 'react';
 
 class ClassClock extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = { data: new Date()};
+        this.state = {date: new Date()};  
     }
 
     componentDidMount() {
@@ -22,9 +22,9 @@ class ClassClock extends React.Component {
     }
     
     render(){
-        const {date: {toLocaleTimeString}} = this.state;
+       
         return (
-            <h1>{toLocaleTimeString()}</h1>
+            <h1>{this.state.date.toLocaleTimeString()}</h1>
         )
     }
 }
