@@ -15,12 +15,15 @@ const Box = styled.div`
 const Wrap = () => {
 
     const [todos, setTodos] = useState([]);
-    console.log(todos)
+    const deleteTodo = id => {
+        const newArr = todos.filter(todo => todo.id !== id);
+        setTodos(newArr);
+    }
     return (
         <Box>
             <Title />
             <Form todos={todos} setData={setTodos} />
-            <List todos={todos} />
+            <List todos={todos} deleteTodo={deleteTodo} />
         </Box>
     )
 }

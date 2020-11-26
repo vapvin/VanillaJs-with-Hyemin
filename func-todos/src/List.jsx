@@ -1,10 +1,10 @@
 import Item from "./Item";
 
-const List = ({todos}) => {
+const List = ({todos, deleteTodo}) => {
     return (
         <ul>
             {todos ? todos.map(todo => {
-                return <Item text={todo.text} id={todo.id} key={todo.id} />
+                return <Item text={todo.text} deleteTodo={deleteTodo} id={todo.id} key={todo.id} />
             }) : "할 일 없음"}
         </ul>
     )
