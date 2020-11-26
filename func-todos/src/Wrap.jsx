@@ -19,6 +19,7 @@ const Wrap = () => {
         const newArr = todos.filter(todo => todo.id !== id);
         setTodos(newArr);
     }
+    
     return (
         <Box>
             <Title />
