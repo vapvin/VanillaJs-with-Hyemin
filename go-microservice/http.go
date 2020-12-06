@@ -39,3 +39,17 @@ func fetchGoogle(t *testing.T){
 	}
 }
 
+func (h validationHandler) ServeHTTP(rw http.ResponseWriter, r * http.Request){
+	var request helloWorldRequest
+	decoder := json.NewDecoder(r.Body)
+
+	err := decoder.Decode(&request)
+	if err != nil {
+		http.Error(rw, "Bad Request", http.StatusBadRequest)
+		return
+	}
+	c := context.WithValue(r.Context(), validationContextkey("name"), request.Name)
+	r = r.WithContext(c)
+
+	h.next.ServeHTTP(rw, r)
+}
