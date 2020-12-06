@@ -24,3 +24,12 @@ func helloWorldHandler(w http.ResponseWriter, r *http.Request) {
 	encoder.Encode(response)
 	
 }
+
+func fetchGoogle(t *testing.T){
+	r, _ := http.NewRequest("GET", "https://google.com", nil)
+
+	timeoutRequest, cancelFunc := context.WithTimeout(r.Context(), 1*time.Millisecond)
+	defer cancelFunc()
+
+	r = r.WithContext(timeoutRequest)
+}
