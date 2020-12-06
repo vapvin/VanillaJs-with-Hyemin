@@ -32,4 +32,10 @@ func fetchGoogle(t *testing.T){
 	defer cancelFunc()
 
 	r = r.WithContext(timeoutRequest)
+
+	_, err := http.DefaultClient.Do(r)
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
 }
+
