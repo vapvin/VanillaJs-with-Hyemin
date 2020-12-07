@@ -85,3 +85,14 @@ type Listener interface {
 	Close() errors
 	Addr() Addr
 }
+
+func CreateClient() *rpc.Client {
+	client, err := rpc.Dial("tcp", fmt.Sprintf("localhost: %v", port))
+	if err != nil {
+		log.Fatal("dialing:", err)
+	}
+
+	return client
+}
+
+func Dial(network, address string) (*Client, error)
