@@ -53,3 +53,10 @@ func (h validationHandler) ServeHTTP(rw http.ResponseWriter, r * http.Request){
 
 	h.next.ServeHTTP(rw, r)
 }
+
+tpye HelloWorldHandler struct {}
+
+func (h *HelloWorldHandler) HeldloWorld(args *contract.HelloWorldRequest, reply *contract.HelloWorldResponse) error {
+	reply.Message = "Hello" + args.Name
+	return nil
+}
