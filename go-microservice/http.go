@@ -97,7 +97,7 @@ func CreateClient() *rpc.Client {
 
 func Dial(network, address string) (*Client, error)
 
-func performRequest(client *rcp.Client) contract.HelloWorldResponse {
+func PerFormRequest(client *rcp.Client) contract.HelloWorldResponse {
 	args := &contract.HelloWroldRequest{Name: "World"}
 	var reply contract.HelloWorldResponse
 
