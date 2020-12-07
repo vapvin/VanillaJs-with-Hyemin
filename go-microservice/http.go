@@ -60,3 +60,19 @@ func (h *HelloWorldHandler) HeldloWorld(args *contract.HelloWorldRequest, reply 
 	reply.Message = "Hello" + args.Name
 	return nil
 }
+
+func startServer(){
+	helloworld := &HelloWorldHandler{}
+	rpc.Register(helloWorld)
+
+	l, err := net.Listen("tcp", fmt.Sprintf(":%v", port))
+
+	if err != nil {
+		log.Fatal(fmt.Sprintf("Unable to listen on given port: %s", err))
+	}
+
+	for {
+		conn, _ := l.Accept()
+		go rpc.ServeConn(conn)
+	}
+}
