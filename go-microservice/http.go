@@ -96,3 +96,15 @@ func CreateClient() *rpc.Client {
 }
 
 func Dial(network, address string) (*Client, error)
+
+func performRequest(client *rcp.Client) contract.HelloWorldResponse {
+	args := &contract.HelloWroldRequest{Name: "World"}
+	var reply contract.HelloWorldResponse
+
+	err := client.Call("HelloWorldhandler.HelloWorld", args, &reply)
+	if err != nil {
+		log.Fatal("error:", err)
+	}
+
+	return reply
+}
