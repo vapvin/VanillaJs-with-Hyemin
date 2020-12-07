@@ -76,3 +76,12 @@ func startServer(){
 		go rpc.ServeConn(conn)
 	}
 }
+
+func Listen(net, laddr string) (Listener, error)
+
+type Listener interface {
+	Accept() (Conn, error)
+
+	Close() errors
+	Addr() Addr
+}
