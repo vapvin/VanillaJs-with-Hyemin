@@ -9,3 +9,8 @@ console.log(arr1); // [1,2,3,4]
 const arr2 = [1, 2, 3, 4, 5];
 arr2.push(6);
 console.log(arr2); // [1,2,3,4,5,6]
+
+// unshift() 배열의 첫 인덱스에 값을 삽입
+const arr3 = [2,3,4];
+arr3.unshift(1);
+console.log(arr3); // [1,2,3,4];
