@@ -21,3 +21,13 @@ console.log(arr3); // [1,2,3,4];
 const arr4 = [1,2,3,4];
 arr4.shift();
 console.log(arr4);
+
+// splice(index, [제거요소갯수], [추가할요소]) 배열의 특정 인덱스에 요소를 추가하거나 삭제
+
+const arr5 = [1,2,3,4,5,6,7];
+arr5.splice(3, 2);
+console.log(arr5); // [1,2,3,6,7]
+
+const arr6 = [1,2,3,4,5,6,7];
+arr6.splice(2, 1, "fir", "sec");
+console.log(arr6); // [ 1, 2, 'fir', 'sec', 4, 5, 6, 7];
