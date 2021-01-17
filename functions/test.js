@@ -43,12 +43,21 @@
 // console.log(a);
 // console.log(b);
 
-const test = function(){
-    console.log("a");
-    return function(){
-        console.log("b");
-    }
-}
+// const test = function(){
+//     console.log("a");
+//     return function(){
+//         console.log("b");
+//     }
+// }
 
-const test = test();
+// const test = test();
+// test();
+
+function test(){
+    const len = arguments.length;
+    
+    console.log(arguments[4]);
+}
 test();
+test(2);
+test(2, 3);
