@@ -10,9 +10,35 @@
 
 // setTimeout(function(){}, )
 
-function add(a){
-    a();
+// function add(a){
+//     a();
+// }
+
+// add();
+
+// 내부함수
+
+function parent(){
+    const a = 2;
+    const b = 3;
+
+    function child(){
+        const b = 4;
+        console.log(a);
+        console.log(b);
+    }
+    return child;
 }
 
+const child = parent();
+console.log(child)
 
-add("test");
+function add() {
+    return;
+}
+
+const a = add;
+const b = add();
+
+console.log(a);
+console.log(b);
