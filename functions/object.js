@@ -80,7 +80,7 @@
 //     console.log(this);
 // }
 
-// const person1 = Person("test", 12);
+// const person1 = new Person("test", 12);
 
 // console.log(person1)
 
@@ -111,25 +111,106 @@
 
 // obj.abc();
 
-const obj = {
-    aaa:6,
-    acd(){
+// const obj = {
+//     aaa:6,
+//     acd(){
+//         console.log(this);
+//     },
+//     abc: {
+//         test:{
+//             a: 5,
+//             ad: () => {
+//                 console.log(this);
+//             }
+//         }
+//     },
+//     abcd: () => {
+//         console.log(this);
+//     }
+// }
+
+
+// obj.abcd();
+// obj.acd();
+// obj.abc.test.ad();
+
+// const a = () => {
+//     console.log(this);
+// }
+
+// function test(){
+//     console.log(this);
+
+//     function name(){
+//         console.log(this);
+//     }
+
+//     name();
+// }
+
+
+// a();
+// test();
+
+
+// const obj = {
+//     a: 5,
+//     test: function(){
+//         console.log(this);
+        
+//         function test1(){
+//             console.log(this);
+//         }
+//         test1();
+//     }
+// }
+// obj.test();
+
+// function test(){
+//     this
+// }
+
+// function add(){
+//     this.name = "test";
+//     console.log(this);
+// }
+
+// const b = new add();
+
+// const add = {
+//     test: function(){
+//         console.log(this);
+
+//         const test1 = () => {
+//             console.log(this);
+//             const test2 = () => {
+//                 console.log(this);
+//                 function test4(){
+//                     console.log(this);
+//                 }
+//                 test4();
+//             }
+//             test2()
+//         }
+//         test1();
+//     }
+// }
+
+// const test3 = () => {
+//     console.log(this);
+// }
+
+// add.test();
+// console.log(add);
+// test3();
+
+function Person(){
+    this.age = 0;
+
+    setInterval(() => {
+        this.age++;
         console.log(this);
-    },
-    abc: {
-        test:{
-            a: 5,
-            ad: () => {
-                console.log(this);
-            }
-        }
-    },
-    abcd: () => {
-        console.log(this);
-    }
+    },1000)
 }
 
-obj.abcd();
-obj.acd();
-obj.abc.test.ad();
-
+var p = new Person();
