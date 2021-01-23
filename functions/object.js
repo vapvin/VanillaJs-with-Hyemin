@@ -204,13 +204,68 @@
 // console.log(add);
 // test3();
 
-function Person(){
-    this.age = 0;
+// function Person(name){
+//     this.name = name;
+// }
 
-    setInterval(() => {
-        this.age++;
-        console.log(this);
-    },1000)
+// Person.getName = function(name){
+//     return new Person(name);
+// }
+
+// const human = Person.getName("현규");
+
+// var p = new Person();
+
+// Class ( C++, Java, Python, etc..)
+// 상속, 캡슐화, 은닉화 이런걸 통해서 객체지향 프로그래밍을 구현하려고 만들었어
+// javascript 는 Class기반(X), Prototype(O)
+
+// 프로퍼티, 메소드 하나로 추상화를 한다.
+// 선언식 표현식
+
+
+class Human {
+    constructor(name, tall, weight){
+        this.name = name;
+        this._tall = tall;
+        this._weight = weight;
+    }
+
+    get bmi(){
+        return this.weight / ((this.tall/10) * (this.tall/10));
+    }
+
+  
+    // Method
+
+    // printName(){
+    //     return this.name;
+    // }
+
+    // // static Method
+    // static create(name, age){
+    //     return new Human(name, age);
+    // }
 }
 
-var p = new Person();
+const obj = new Human("현규", 175, 71);
+console.log(obj.name);
+console.log(obj.tall);
+console.log(obj.weight);
+console.log(obj.bmi);
+
+
+// function Person(name, age){
+//     this.name = name;
+//     this.age = age;
+//     this.getName = function(){
+//         return this.name;
+//     }
+// }
+
+// const human1 = new Person('test1', 25);
+// const human2 = new Person('test2', 26);
+// const human3 = new Person('test3', 27);
+// const human4 = new Person('test4', 28);
+// const human5= new Person('test5', 29);
+// console.log(human.create());
