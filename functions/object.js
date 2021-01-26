@@ -270,14 +270,45 @@
 // const human5= new Person('test5', 29);
 // console.log(human.create());
 
-function Person(){
-    this.name = 'name';
+// function Person(){
+//     this.name = 'name';
+// }
+
+// Person.prototype.getName = function(){
+//     console.log(this.name);
+// }
+
+// const a =  new Person();
+// console.log(a)
+// a.getName();
+
+class Person {
+    constructor(name){
+        this.name = name;
+    }
+
+    sayHello(){
+        console.log("Hello");
+    }
 }
 
-Person.prototype.getName = function(){
-    console.log(this.name);
+class Baby extends Person {
+    constructor(name, age){
+        super(name);
+        this.age = age;
+    }
+    
+    sayHello(){
+        super.sayHello();
+        console.log("World");
+    }
+    sayName(){
+        console.log(this.name);
+    }
 }
-
-const a =  new Person();
-console.log(a)
-a.getName();
+const human = new Person("test");
+const baby1 = new Baby('아기', 1);
+console.log(human);
+console.log(baby1);
+baby1.sayHello();
+baby1.sayName();
