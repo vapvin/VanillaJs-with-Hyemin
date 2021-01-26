@@ -224,16 +224,16 @@
 // 선언식 표현식
 
 
-class Human {
-    constructor(name, tall, weight){
-        this.name = name;
-        this._tall = tall;
-        this._weight = weight;
-    }
+// class Human {
+//     constructor(name, tall, weight){
+//         this.name = name;
+//         this._tall = tall;
+//         this._weight = weight;
+//     }
 
-    get bmi(){
-        return this.weight / ((this.tall/10) * (this.tall/10));
-    }
+//     get bmi(){
+//         return this.weight / ((this.tall/10) * (this.tall/10));
+//     }
 
   
     // Method
@@ -246,13 +246,13 @@ class Human {
     // static create(name, age){
     //     return new Human(name, age);
     // }
-}
+// }
 
-const obj = new Human("현규", 175, 71);
-console.log(obj.name);
-console.log(obj.tall);
-console.log(obj.weight);
-console.log(obj.bmi);
+// const obj = new Human("현규", 175, 71);
+// console.log(obj.name);
+// console.log(obj.tall);
+// console.log(obj.weight);
+// console.log(obj.bmi);
 
 
 // function Person(name, age){
@@ -269,3 +269,15 @@ console.log(obj.bmi);
 // const human4 = new Person('test4', 28);
 // const human5= new Person('test5', 29);
 // console.log(human.create());
+
+function Person(){
+    this.name = 'name';
+}
+
+Person.prototype.getName = function(){
+    console.log(this.name);
+}
+
+const a =  new Person();
+console.log(a)
+a.getName();
