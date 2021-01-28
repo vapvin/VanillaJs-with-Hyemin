@@ -13,7 +13,33 @@ class TypeWriter {
     }
 
     type(){
+        const current = this.wordIndex % this.words.length;
+        const fullTxt = this.words[current];
 
+        if(this.isDeleting){ // 삭제일 경우
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+        let typeSpeed = 300; // 0.3s
+
+        if(this.isDeleting){
+            typeSpeed /= 2; // 0.15s
+        }
+
+        if(!this.isDeleting && this.txt === fullTxt){
+            typeSpeed = this.wait; // 2초를 기다리고
+            this.isDeleting = true; // 삭제를 시작
+        } else if(this.isDeleting && this.txt === ""){
+            this.isDeleting = false;
+            this.wordIndex++;
+            typeSpeed = 500;
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
     }
 }
 
