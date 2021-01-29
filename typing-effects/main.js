@@ -18,7 +18,7 @@ class TypeWriter {
 
         if(this.isDeleting){ // 삭제일 경우
             this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
+        } else { // 입력중일경우
             this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
 
@@ -53,3 +53,4 @@ function init(){
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
