@@ -1,16 +1,15 @@
-const a = [1,2,3,4,5]
+// 객체 키 - 값 쌍을 저장
+// for of 객체 
 
-const settest = new Set(a);
+const map = new Map();
+map.set(123, "hyemin");
+map.set(1234, "test");
+map.set(1235, "testsize");
 
+console.log(map);
+const ab = map.keys();
 
-settest.add(6);
-settest.delete(2);
-// settest.clear();
-const av = settest.entries();
-
-settest.forEach((val, index) => {
-    console.log(`${value}, ${value2}`)
-});
-
-console.log(settest);
-console.log(av);
+console.log(ab);
+for(c of ab){
+    console.log(c);
+}
