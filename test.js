@@ -1,15 +1,44 @@
-// 객체 키 - 값 쌍을 저장
-// for of 객체 
+function* test(){
+    asdfasdfasdfasd
 
-const map = new Map();
-map.set(123, "hyemin");
-map.set(1234, "test");
-map.set(1235, "testsize");
+    yield 1;
+    asdfasdfadsfasdf
 
-console.log(map);
-const ab = map.keys();
-
-console.log(ab);
-for(c of ab){
-    console.log(c);
+    yield 2;
+    yield 3;
+    yield 4;
+    yield 5;
+    yield 6;
+    yield 7;
+    yield 8;
 }
+// React, React-Hooks 
+// Redux, useQuery
+
+// Redux-Thunk
+
+// Redux-saga
+
+// Iterable, Iterator 반복자 있다.
+// Iterable => Symbol.iterator
+// Iterator => next()
+// Iterator를 만들기 위한 함수 => Generator 함수
+
+// Iterator = 반복자 or 반복기 
+// 생성자 = Generator
+const abc = test();
+console.log(abc);
+
+for(item of abc){
+    console.log(item)
+}
+
+
+try {
+    if(){
+
+    } catch {
+
+    }
+} 
+
