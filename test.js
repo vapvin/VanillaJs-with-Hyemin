@@ -1,44 +1,48 @@
-function* test(){
-    asdfasdfasdfasd
+// function* test(){
+//     asdfasdfasdfasd
 
-    yield 1;
-    asdfasdfadsfasdf
+//     yield 1;
+//     asdfasdfadsfasdf
 
-    yield 2;
-    yield 3;
-    yield 4;
-    yield 5;
-    yield 6;
-    yield 7;
-    yield 8;
-}
-// React, React-Hooks 
-// Redux, useQuery
+//     yield 2;
+//     yield 3;
+//     yield 4;
+//     yield 5;
+//     yield 6;
+//     yield 7;
+//     yield 8;
+// }
+// // React, React-Hooks 
+// // Redux, useQuery
 
-// Redux-Thunk
+// // Redux-Thunk
 
-// Redux-saga
+// // Redux-saga
 
-// Iterable, Iterator 반복자 있다.
-// Iterable => Symbol.iterator
-// Iterator => next()
-// Iterator를 만들기 위한 함수 => Generator 함수
+// // Iterable, Iterator 반복자 있다.
+// // Iterable => Symbol.iterator
+// // Iterator => next()
+// // Iterator를 만들기 위한 함수 => Generator 함수
 
-// Iterator = 반복자 or 반복기 
-// 생성자 = Generator
-const abc = test();
-console.log(abc);
+// // Iterator = 반복자 or 반복기 
+// // 생성자 = Generator
+// const abc = test();
+// console.log(abc);
 
-for(item of abc){
-    console.log(item)
-}
+// for(item of abc){
+//     console.log(item)
+// }
 
 
-try {
-    if(){
+// try {
+//     if(){
 
-    } catch {
+//     } catch {
 
-    }
-} 
+//     }
+// } 
 
+const abc = setTimeout(function(){
+    console.log(200000);
+}, 20000);
+clearTimeout(abc);
