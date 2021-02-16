@@ -1,5 +1,5 @@
-const PLUSE = 'counter/INCREASE';
-const MINUS = 'counter/DECREASE';
+const PLUSE = 'counter/PLUS';
+const MINUS = 'counter/MINUS';
 
 
 export const plus = () => ({ type: PLUSE });
