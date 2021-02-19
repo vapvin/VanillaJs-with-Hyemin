@@ -12,7 +12,7 @@
 //     yield 7;
 //     yield 8;
 // }
-// // React, React-Hooks 
+// // React, React-Hooks
 // // Redux, useQuery
 
 // // Redux-Thunk
@@ -24,7 +24,7 @@
 // // Iterator => next()
 // // Iterator를 만들기 위한 함수 => Generator 함수
 
-// // Iterator = 반복자 or 반복기 
+// // Iterator = 반복자 or 반복기
 // // 생성자 = Generator
 // const abc = test();
 // console.log(abc);
@@ -33,16 +33,22 @@
 //     console.log(item)
 // }
 
-
 // try {
 //     if(){
 
 //     } catch {
 
 //     }
-// } 
+// }
 
-const abc = setTimeout(function(){
-    console.log(200000);
-}, 20000);
-clearTimeout(abc);
+function test(callback) {
+  console.log(callback);
+  callback();
+}
+
+function hello(a) {
+  console.log(a);
+}
+
+test(() => hello("Hello"));
+
